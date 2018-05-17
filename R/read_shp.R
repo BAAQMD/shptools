@@ -8,9 +8,9 @@
 #' @return an `sf` object
 #'
 #' @examples
-#' shp_zip <- "~/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
-#' sf_obj <- read_shp(shp_zip, layer = "CoAbDis")
-#' show(sf_obj)
+#' zip_file <- "~/Dropbox/ca_co_ab_dis.zip"
+#' sf_obj <- read_shp(zip_file, layer = "CoAbDis")
+#' mapview(sf_obj)
 #'
 #' @export
 read_shp <- function (dsn, layer, ..., verbose = getOption("verbose")) {
