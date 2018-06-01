@@ -12,9 +12,13 @@
 #' show(exdir)
 #'
 #' @export
-unzip_only <- function (zip_file, pattern = ".*", junkpaths = FALSE, ..., verbose = getOption("verbose")) {
+unzip_only <- function (zip_file, pattern = NULL, junkpaths = FALSE, ..., verbose = getOption("verbose")) {
 
   msg <- function (...) if(isTRUE(verbose)) message("[unzip_only] ", ...)
+
+  if (is.null(pattern)) {
+    pattern <- ".*"
+  }
 
   exdir <- tempdir()
   msg("tempdir() is: ", exdir)

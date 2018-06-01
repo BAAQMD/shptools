@@ -4,7 +4,7 @@
 \alias{unzip_only}
 \title{Unzip only files matching a pattern}
 \usage{
-unzip_only(zip_file, pattern = ".*", junkpaths = FALSE, ...,
+unzip_only(zip_file, pattern = NULL, junkpaths = FALSE, ...,
   verbose = getOption("verbose"))
 }
 \arguments{
