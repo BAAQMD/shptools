@@ -4,7 +4,7 @@
 \alias{read_shp}
 \title{Read a layer from a shapefile}
 \usage{
-read_shp(dsn, layer, ..., verbose = getOption("verbose"))
+read_shp(dsn = ".", layer = NULL, ..., verbose = getOption("verbose"))
 }
 \arguments{
 \item{dsn}{(character) path to folder or ZIP file}
@@ -22,8 +22,8 @@ an \code{sf} object
 Read a layer from a shapefile
 }
 \examples{
-shp_zip <- "~/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
-sf_obj <- read_shp(shp_zip, layer = "CoAbDis")
-show(sf_obj)
+zip_file <- "~/Dropbox/ca_co_ab_dis.zip"
+sf_obj <- read_shp(zip_file, layer = "CoAbDis")
+mapview(sf_obj)
 
 }
