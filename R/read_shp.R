@@ -37,8 +37,15 @@ read_shp <- function (dsn = ".", layer = NULL, ..., verbose = getOption("verbose
     str_detect(dsn, regex("\\.zip$", ignore_case = TRUE))
   }
 
+  rmdir <- function (path) {
+    msg("deleting ", path)
+    base::unlink(path, recursive = TRUE)
+  }
+
   if (is_zipfile(dsn)) {
-    dsn <- unzip_only(dsn, pattern = layer, junkpaths = TRUE, verbose = verbose)
+    exdir <- unzip_only(dsn, pattern = layer, junkpaths = TRUE, verbose = verbose)
+    dsn <- exdir
+    on.exit(rmdir(exdir))
   }
 
   if (is.null(layer)) {
