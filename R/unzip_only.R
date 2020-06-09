@@ -20,8 +20,9 @@ unzip_only <- function (zip_file, pattern = NULL, junkpaths = FALSE, ..., verbos
     pattern <- ".*"
   }
 
-  exdir <- tempdir()
-  msg("tempdir() is: ", exdir)
+  exdir <- tempfile(pattern = basename(zip_file)) # NOT tempdir()
+  dir.create(exdir)
+  msg("exdir() is: ", exdir)
   msg("pattern is: ", pattern)
 
   # Get the names of all files in the ZIP archive. Don't unzip it just yet.
