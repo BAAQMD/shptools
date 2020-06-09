@@ -4,8 +4,13 @@
 \alias{write_shp}
 \title{Write geodata to a shapefile}
 \usage{
-write_shp(geodata, dsn = getwd(), layer = deparse(substitute(geodata)), ...,
-  verbose = TRUE)
+write_shp(
+  geodata,
+  dsn = getwd(),
+  layer = deparse(substitute(geodata)),
+  ...,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{geodata}{(sf or sp object)}

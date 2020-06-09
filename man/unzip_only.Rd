@@ -4,8 +4,13 @@
 \alias{unzip_only}
 \title{Unzip only files matching a pattern}
 \usage{
-unzip_only(zip_file, pattern = NULL, junkpaths = FALSE, ...,
-  verbose = getOption("verbose"))
+unzip_only(
+  zip_file,
+  pattern = NULL,
+  junkpaths = FALSE,
+  ...,
+  verbose = getOption("verbose")
+)
 }
 \arguments{
 \item{zip_file}{(character) path to ZIP file}
