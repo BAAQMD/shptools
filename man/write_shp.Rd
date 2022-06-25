@@ -19,7 +19,7 @@ write_shp(
 
 \item{layer}{(character) layer name; see \code{\link[sf:st_write]{sf::st_write()}}}
 
-\item{...}{further arguments to \code{\link[sf:write_sf]{sf::write_sf()}}}
+\item{...}{further arguments to \code{\link[sf:st_write]{sf::write_sf()}}}
 }
 \value{
 \code{geodata}, invisibly (to allow for chaining)

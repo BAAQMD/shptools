@@ -4,14 +4,22 @@
 \alias{read_shp}
 \title{Read a layer from a shapefile}
 \usage{
-read_shp(dsn = ".", layer = NULL, ..., verbose = getOption("verbose"))
+read_shp(
+  dsn = ".",
+  layer = NULL,
+  crs = NULL,
+  ...,
+  verbose = getOption("verbose")
+)
 }
 \arguments{
 \item{dsn}{(character) path to folder or ZIP file}
 
 \item{layer}{(character) layer to extract}
 
-\item{...}{further arguments to \code{\link[sf:read_sf]{sf::read_sf()}}}
+\item{crs}{(optional) passed to \code{\link[sf:st_transform]{sf::st_transform()}}}
+
+\item{...}{passed to \code{\link[sf:st_read]{sf::read_sf()}}}
 
 \item{verbose}{(logical)}
 }

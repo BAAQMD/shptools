@@ -15,7 +15,7 @@ unzip_only(
 \arguments{
 \item{zip_file}{(character) path to ZIP file}
 
-\item{pattern}{(character) see \link[utils:glob2rx]{utils::glob2rx} and \link[stringr:regex]{stringr::regex}}
+\item{pattern}{(character) see \link[utils:glob2rx]{utils::glob2rx} and \link[stringr:modifiers]{stringr::regex}}
 
 \item{junkpaths}{(logical) if \code{TRUE}, use only the basename of the stored filepath (discard subdirectory names)}
 

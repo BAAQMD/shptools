@@ -30,6 +30,9 @@ write_shp <- function (
 
   dsn <- normalizePath(dsn, mustWork = TRUE)
 
+  msg("writing ", nrow(geodata), " features to ", file.path(dsn, layer))
+  msg("md5 is: ", digest::digest(geodata, algo = "md5"))
+
   write_sf(
     geodata,
     dsn = dsn,
