@@ -8,6 +8,8 @@ Description: Supports the BAAQMD inventoryverse.
 Depends:
   strtools,
   sf
+Imports:
+  downloader
 Remotes:
   github::BAAQMD/strtools
 License: MIT
