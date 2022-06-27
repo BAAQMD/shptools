@@ -1,13 +1,15 @@
 Package: shptools
 Type: Package
 Title: Provides I/O for ESRI Shapefiles
-Version: 2020.08.21
+Version: 2022.06.27
 Author: David Holstius
 Maintainer: David Holstius <dholstius@baaqmd.gov>
 Description: Supports the BAAQMD inventoryverse.
 Depends:
   strtools,
   sf
+Remotes:
+  github::BAAQMD/strtools
 License: MIT
 Encoding: UTF-8
 LazyData: true
