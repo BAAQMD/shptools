@@ -10,11 +10,6 @@
 #' @importFrom strtools str_csv
 #' @importFrom utils unzip
 #'
-#' @examples
-#' zip_file <- "/Users/dholstius/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
-#' exdir <- unzip_only(zip_file, pattern = "CoAbDis", verbose = TRUE)
-#' show(exdir)
-#'
 #' @export
 unzip_only <- function (zip_file, pattern = NULL, junkpaths = FALSE, ..., verbose = getOption("verbose")) {
 

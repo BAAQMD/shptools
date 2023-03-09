@@ -29,9 +29,3 @@ an \code{sf} object
 \description{
 Read a layer from a shapefile
 }
-\examples{
-zip_file <- "~/Dropbox/ca_co_ab_dis.zip"
-sf_obj <- read_shp(zip_file, layer = "CoAbDis")
-mapview(sf_obj)
-
-}

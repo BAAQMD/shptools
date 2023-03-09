@@ -20,16 +20,12 @@ write_shp(
 \item{layer}{(character) layer name; see \code{\link[sf:st_write]{sf::st_write()}}}
 
 \item{...}{further arguments to \code{\link[sf:st_write]{sf::write_sf()}}}
+
+\item{verbose}{(logical)}
 }
 \value{
 \code{geodata}, invisibly (to allow for chaining)
 }
 \description{
 Write geodata to a shapefile
-}
-\examples{
-require(ARB)
-dsn <- tempdir()
-write_shp(ARB_CoAbDis, dsn = dsn, layer = "CoAbDis", delete_layer = TRUE)
-
 }

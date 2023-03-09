@@ -9,11 +9,6 @@
 #' @importFrom sf write_sf
 #' @importFrom digest digest
 #'
-#' @examples
-#' require(ARB)
-#' dsn <- tempdir()
-#' write_shp(ARB_CoAbDis, dsn = dsn, layer = "CoAbDis", delete_layer = TRUE)
-#'
 #' @return `geodata`, invisibly (to allow for chaining)
 #'
 #' @export

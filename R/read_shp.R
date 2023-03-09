@@ -14,11 +14,6 @@
 #' @importFrom stringr str_starts str_detect str_c regex
 #' @importFrom sf read_sf st_transform
 #'
-#' @examples
-#' zip_file <- "~/Dropbox/ca_co_ab_dis.zip"
-#' sf_obj <- read_shp(zip_file, layer = "CoAbDis")
-#' mapview(sf_obj)
-#'
 #' @export
 read_shp <- function (
   dsn = ".",

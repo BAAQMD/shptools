@@ -26,9 +26,3 @@ unzip_only(
 \description{
 Unzip only files matching a pattern
 }
-\examples{
-zip_file <- "/Users/dholstius/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
-exdir <- unzip_only(zip_file, pattern = "CoAbDis", verbose = TRUE)
-show(exdir)
-
-}
