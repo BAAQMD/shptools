@@ -10,9 +10,8 @@
 #'
 #' @importFrom httr parse_url
 #' @importFrom downloader download
-#' @importFrom rgdal ogrListLayers
 #' @importFrom stringr str_starts str_detect str_c regex
-#' @importFrom sf read_sf st_transform
+#' @importFrom sf read_sf st_transform st_layers
 #'
 #' @export
 read_shp <- function (
@@ -60,7 +59,7 @@ read_shp <- function (
 
   if (is.null(layer)) {
     # default to the first layer
-    available_layers <- rgdal::ogrListLayers(dsn)
+    available_layers <- sf::st_layers(dsn)[["name"]]
     layer <- available_layers[[1]]
     if (length(available_layers) > 1) {
       other_layers <- setdiff(available_layers, layer)
