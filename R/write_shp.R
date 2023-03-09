@@ -4,6 +4,10 @@
 #' @param dsn (character) generally, a path on disk; see [sf::st_write()]
 #' @param layer (character) layer name; see [sf::st_write()]
 #' @param ... further arguments to [sf::write_sf()]
+#' @param verbose (logical)
+#'
+#' @importFrom sf write_sf
+#' @importFrom digest digest
 #'
 #' @examples
 #' require(ARB)
@@ -33,7 +37,7 @@ write_shp <- function (
   msg("writing ", nrow(geodata), " features to ", file.path(dsn, layer))
   msg("md5 is: ", digest::digest(geodata, algo = "md5"))
 
-  write_sf(
+  sf::write_sf(
     geodata,
     dsn = dsn,
     layer = layer,

@@ -10,7 +10,11 @@ Depends:
 Imports:
   stringr,
   strtools,
-  downloader
+  downloader,
+  rgdal,
+  httr,
+  utils,
+  digest
 Remotes:
   github::BAAQMD/strtools
 License: MIT

@@ -8,6 +8,7 @@
 #'
 #' @importFrom stringr str_trunc
 #' @importFrom strtools str_csv
+#' @importFrom utils unzip
 #'
 #' @examples
 #' zip_file <- "/Users/dholstius/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
@@ -29,7 +30,7 @@ unzip_only <- function (zip_file, pattern = NULL, junkpaths = FALSE, ..., verbos
   msg("pattern is: ", pattern)
 
   # Get the names of all files in the ZIP archive. Don't unzip it just yet.
-  file_set <- unzip(zip_file, list = TRUE)
+  file_set <- utils::unzip(zip_file, list = TRUE)
   file_names <- file_set[["Name"]]
   which_match <- which(str_detect(file_names, pattern = pattern))
   matching_files <- file_names[which_match]
