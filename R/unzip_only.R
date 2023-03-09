@@ -6,6 +6,8 @@
 #' @param ... further arguments to [utils::unzip]
 #' @param verbose (logical)
 #'
+#' @importFrom stringr str_trunc str_csv
+#'
 #' @examples
 #' zip_file <- "/Users/dholstius/GitHub/BAAQMD/ARB/tmp/ca_co_ab_dis.zip"
 #' exdir <- unzip_only(zip_file, pattern = "CoAbDis", verbose = TRUE)
